@@ -4,22 +4,57 @@
 To write a C Program to convert a given decimal value to binary using function without arguments with return type.
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+1.Start the program.
+
+2.Create a function with no arguments that reads a decimal number from the user.
+
+3.Inside the function, convert the number to binary using a loop and store the binary digits.
+
+4.Return 0 from the function after displaying the binary equivalent.
+
+5.Call the function from main() and end the program.
+
 
 ## Program:
 ```
 /*
 Program to C Program to convert a given decimal value to binary using function without arguments with return type.
-Developed by: 
-RegisterNumber:  
+Developed by: Santhosh kumar B
+RegisterNumber:  212223060249
 */
+#include <stdio.h>
+
+int convertToBinary() {
+    int num, binary[32], i = 0;
+    scanf("%d", &num);
+
+    if(num == 0) {
+        printf("Binary: 0\n");
+        return 0;
+    }
+
+    while(num > 0) {
+        binary[i++] = num % 2;
+        num /= 2;
+    }
+
+    printf("Binary: ");
+    for(int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+int main() {
+    convertToBinary();
+    return 0;
+}
 ```
 
 ## Output:
+<img width="381" height="165" alt="image" src="https://github.com/user-attachments/assets/dbe3efb4-4b4d-4623-ad19-b1d9daec4306" />
 
 
 
